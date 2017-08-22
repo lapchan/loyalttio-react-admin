@@ -32,7 +32,7 @@ export default class Menu extends Component {
   }
 
 	render() {
-		var classes = "bg-black aside-md hidden-print";
+		var classes = "bg-white aside-md hidden-print";
         var navClasses = "nav-primary";
         if (!this.state.open) {
            classes += ' nav-xs';
@@ -44,13 +44,13 @@ export default class Menu extends Component {
         return (
         <aside className={classes} id="nav">
             <section className="vbox">
-              <header className="header bg-danger brand-header lock-header pos-stat clearfix">
-                <a className="btn btn-link visible-xs" onClick={()=>this.toggleShowHide()} data-toggle="class:nav-off-screen,open" data-target="#nav,html"> 
+              <header className="header brand-light brand-header lock-header pos-stat clearfix">
+                <a className="btn btn-link" onClick={()=>this.toggleShowHide()} data-toggle="class:nav-off-screen,open" data-target="#nav,html"> 
                   <i className="fa fa-bars"></i> 
                 </a>
-                <div className="text-center tophead">
-                  <img width="25" src={logoUrl} /><br />
-                  <span className="text-center" style={{lineHeight: '21px', fontWeight:'bold'}}>Admin</span>
+                <div>
+                  <span className="" style={{lineHeight: '21px', fontWeight:'bold', fontSize:'16px', display: 'inline'}}>Tealosophy</span>
+                  <img width="25" src={logoUrl} />
                 </div>
               </header>
               <section className="w-f scrollable">
@@ -58,7 +58,7 @@ export default class Menu extends Component {
                     <div className="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333">
                     <nav className={navClasses}>
                       <ul className="nav">
-                        <MenuItem link={'/'}  icon='fa-home' color='bg-danger' linkText='Dashboard' currentPage={this.props.currentPage}>
+                        <MenuItem link={'/'}  icon='fa-home' color='bg-danger' linkText='Overview' currentPage={this.props.currentPage}>
                         </MenuItem>                                    
                         <MenuItem link={'/'}  icon='fa-desktop' color='bg-success' linkText='UI' currentPage={this.props.currentPage}>
                             <SubMenuItem link={'/ui/general'} linkText={'General'} />

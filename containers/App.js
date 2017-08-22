@@ -36,7 +36,7 @@ class App extends Component {
     const { location, children, loggedIn, user, dispatch } = this.props;
     const { pathname } = location;
     const value = pathname.substring(1);
-    const logoUrl = "/dist/images/react-logo.png";
+    const logoUrl = "/dist/images/tealosophy_logo.png";
 
     if (!loggedIn) {
       if (value === 'signup') {

@@ -34,7 +34,7 @@ export default class Header extends Component {
         <div className="container full"> 
           <div className="m-b-lg"> 
             <div className="pull-left w50 m-t-xs">
-              <h3 className="m-b-none">{route.pageName}</h3> 
+              <h4 className="m-b-none">{route.pageName}</h4> 
               <small className="text-muted">{route.pageDescription}</small> 
             </div>
             <div className="pull-right w50 text-right m-t-lg">

@@ -19,10 +19,10 @@ export default class FullScreenLogin extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-	      email: '',
-	      password: '',
+	      email: 'lapchan@gmail.com',
+	      password: 'fred1234',
 	      error:'',
-	      endpoint:''
+	      endpoint:'http://localhost:3000/'
 	    };
 	}
 
