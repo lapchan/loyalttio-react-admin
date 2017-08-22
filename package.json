@@ -22,6 +22,7 @@
     "draft-js-linkify-plugin": "^1.0.1",
     "draft-js-plugins-editor": "^1.1.0",
     "googleapis": "^9.0.0",
+    "json-loader": "^0.5.7",
     "moment": "^2.13.0",
     "rc-slider": "^3.7.3",
     "react": "^15.1.0",
@@ -40,7 +41,8 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
     "redux-react-router": "^1.0.0-beta3",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "skygear": "^1.1.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",

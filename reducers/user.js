@@ -9,7 +9,7 @@
  */
 
 import {
-  RECEIVE_ME, USER_SIGNUP, USER_ME_UPDATE
+  USER_AUTH, RECEIVE_ME, USER_SIGNUP, USER_ME_UPDATE
 } from '../actions';
 
 const initialState = {
@@ -21,7 +21,10 @@ const initialState = {
 };
 
 export default function user(state = initialState, action) {
+	console.log("/reducer/user: ", action)
 	switch (action.type) {
+		case USER_AUTH:
+			return Object.assign({}, state, action.res);
 		case RECEIVE_ME:
 			return Object.assign({}, state, action.res.data);
 		case USER_SIGNUP:

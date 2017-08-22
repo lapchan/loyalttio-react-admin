@@ -3145,6 +3145,7 @@ button[data-balloon] {
 html {
   background-color: #f7f7f7;
   overflow-x: hidden;
+  height: 100%;
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3681,4 +3682,18 @@ body {
 }
 .docsContainer {
   background-color: white;
+}
+.page--signin {
+  height: calc(100% - 30px);
+}
+.as-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.as-table-cell {
+  display: table-cell;
+}
+.as-table-cell--middle {
+  vertical-align: middle;
 }

@@ -35,8 +35,8 @@ module.exports = {
         loaders: [
           'style', 'css',
         ],
-     }
-    ]
+      },
+      ]
   },
   node: {
     console: true,

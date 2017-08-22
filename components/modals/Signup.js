@@ -33,12 +33,12 @@ export default class Signup extends Component {
     	this.setState({ password: e.target.value });
   	}
 
-  handlePass2Change(e) {
+  	handlePass2Change(e) {
       this.setState({ password2: e.target.value });
     }
 
 	handleLogin(e) {
-		this.props.onLogin(this.state.email, this.state.password);
+		this.props.onSignup(this.state.email, this.state.password);
 	}
 
 	render() {

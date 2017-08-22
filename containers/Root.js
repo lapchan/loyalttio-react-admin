@@ -16,6 +16,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import configureStore from '../store/configureStore';
 
 import Landing from './Landing';
+import Login from '../components/modals/FullScreenLogin';
 
 import App from './App';
 import Account from './Account';
@@ -78,6 +79,10 @@ var shallowCompare = require('react-addons-shallow-compare');
 
 export default class Root extends Component {
   
+  constructor(props) {
+    super(props);
+  }
+    
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -130,6 +135,8 @@ export default class Root extends Component {
 
           </Route>
           <Route path='/landing' component={Landing} />
+          <Route path="/login" component={(props) => <Login {...props} onLogin={(email,password)=>dispatch(auth(email, password))} />} />
+
         </Router>
       </Provider>
     );

@@ -12,6 +12,7 @@ export default function promiseMiddleware() {
   return next => action => {
     const { promise, type, ...rest } = action;
    
+    console.log("promiseMiddleware: ", action);
     if (!promise) return next(action);
    
     const SUCCESS = type;
@@ -21,6 +22,7 @@ export default function promiseMiddleware() {
     next({ ...rest, type: REQUEST });
     return promise
       .then(res => {
+        console.log("promise: ", rest, res);
         next({ ...rest, res, type: SUCCESS });
         return res; /* simple chaining mechanism, at least return something from our promise */
       })

@@ -15,6 +15,7 @@ import Landing from './Landing';
 import Header from './Header';
 import Menu from './Menu';
 import Signup from './Signup';
+import Login from '../components/modals/FullScreenLogin';
 
 import { fetchMe, auth, signup, logout, isAuthenticated } from '../actions';
 
@@ -22,6 +23,7 @@ var shallowCompare = require('react-addons-shallow-compare');
 
 class App extends Component {
   constructor(props) {
+    console.log("App: ", props);
     super(props);
   }
 
@@ -43,7 +45,7 @@ class App extends Component {
         );
       } else {
         return (
-          <Landing onLogin={(email,password)=>dispatch(auth(email, password))} />
+          <Login onLogin={(email,password)=>dispatch(auth(email, password))} />
         );  
       }
       
@@ -68,6 +70,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log("/app/mapStateToProps: ", state);
   return {
     loggedIn: state.app.loggedIn,
     token: state.app.token,

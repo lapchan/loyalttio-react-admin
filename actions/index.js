@@ -1,4 +1,5 @@
 import request from 'axios';
+import skygear from 'skygear';
 
 export const USER_AUTH = 'USER_AUTH';
 export const USER_LOGOUT = 'USER_LOGOUT';
@@ -39,14 +40,26 @@ export function putMe(me, token) {
 	}
 }
 
+// export function auth(email, pass) {
+// 	const params = {
+//     email:email,
+//     password:pass
+// 	}
+// 	return {
+// 		type : USER_AUTH,
+// 		promise: request.post(API_URL + '/authenticate', params)
+// 	}
+// }
+
 export function auth(email, pass) {
 	const params = {
     email:email,
     password:pass
 	}
+	console.log("auth: ", email, pass);
 	return {
 		type : USER_AUTH,
-		promise: request.post(API_URL + '/authenticate', params)
+		promise: skygear.auth.loginWithEmail(params.email, params.password)
 	}
 }
 

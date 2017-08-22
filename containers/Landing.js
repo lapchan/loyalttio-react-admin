@@ -12,8 +12,11 @@ import React, { Component } from 'react';
 import {Link} from 'react-router';
 
 import ModalFactory from '../components/modals/factory';
+import FullscreenModalFactory from '../components/modals/fullscreenfactory';
 import Login from '../components/modals/Login';
 import Signup from '../components/modals/Signup';
+import FullscreenLogin from '../components/modals/FullScreenLogin';
+import Logout from '../components/modals/Logout';
 
 import {Button, I} from '../components/ui/';
 
@@ -30,7 +33,7 @@ export default class Landing extends Component {
 
 	handleLoginPress(e) {
 		e.preventDefault();
-		ModalFactory.show('loginModal');
+		FullscreenModalFactory.show('basicModalFullscreen');
 	}
 
 	handleSignupPress(e) {
@@ -50,12 +53,14 @@ export default class Landing extends Component {
 	render() {
 
 		var Factory = ModalFactory.modalFromFactory;
+		let FullscreenFactory = FullscreenModalFactory.modalFromFactory;
 
 		return (
 			<section className="vbox scrollable" style={{backgroundColor:'#16181b'}}>
 
             <Factory modalref="loginModal" title="Sign in" factory={Login} />
             <Factory modalref="signupModal" title="Sign up" factory={Signup} />
+						<FullscreenFactory modalref="basicModalFullscreen" title="Basic Modal (Fullscreen)" factory={FullscreenLogin} />
 		
 			<header className="navbar m-b-none">
 			<div className="container">
