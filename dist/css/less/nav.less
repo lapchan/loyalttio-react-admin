@@ -2,9 +2,12 @@
 
 .subheader {
 	background-color: white;
-	-webkit-box-shadow: 0px 2px 2px 0px rgba(233,233,233,1);
-	-moz-box-shadow: 0px 2px 2px 0px rgba(233,233,233,1);
-	box-shadow: 0px 2px 2px 0px rgba(233,233,233,1);
+	// -webkit-box-shadow: 0px 2px 2px 0px rgba(233,233,233,1);
+	// -moz-box-shadow: 0px 2px 2px 0px rgba(233,233,233,1);
+	// box-shadow: 0px 2px 2px 0px rgba(233,233,233,1);
+	// -webkit-box-shadow: 1px 1px 0px 0px #DFE2E5;
+	// -moz-box-shadow: 1px 1px 0px 0px #DFE2E5;
+	// box-shadow: 1px 1px 0px 0px #DFE2E5;
 
 	h3 {
 		color:black;
@@ -13,6 +16,9 @@
 
 .brand-header {
 	padding: 30px 20px;
+	// -webkit-box-shadow: 1px 1px 0px 0px #DFE2E5;
+	// -moz-box-shadow: 1px 1px 0px 0px #DFE2E5;
+	// box-shadow: 1px 1px 0px 0px #DFE2E5;
 
 	div {
 		span {
@@ -88,8 +94,13 @@
 	}
 	ul.nav {
 		> li {
+			&:hover,
+			&.active{
+				border-left: 2px solid #1e94ee;;
+			}
 			> a{
-				padding:floor((@nav-primary-height - 22px)/2) 0px;
+				padding:0px 0px;
+				margin: floor((@nav-primary-height)/2) 0px;
 				position: relative;
 				// font-weight: bold;
 				font-size: 14px;

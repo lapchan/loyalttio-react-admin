@@ -32,7 +32,7 @@ export default class Menu extends Component {
   }
 
 	render() {
-		var classes = "bg-white aside-md hidden-print";
+		var classes = "bg-white aside-md hidden-print divider-right";
         var navClasses = "nav-primary";
         if (!this.state.open) {
            classes += ' nav-xs';
@@ -44,12 +44,12 @@ export default class Menu extends Component {
         return (
         <aside className={classes} id="nav">
             <section className="vbox">
-              <header className="header brand-light brand-header lock-header pos-stat clearfix">
+              <header className="header brand-light brand-header divider-bottom lock-header pos-stat clearfix">
                 <a className="btn btn-link" onClick={()=>this.toggleShowHide()} data-toggle="class:nav-off-screen,open" data-target="#nav,html"> 
                   <i className="fa fa-bars"></i> 
                 </a>
                 <div>
-                  <span className="" style={{lineHeight: '21px', fontWeight:'bold', fontSize:'16px', display: 'inline'}}>Tealosophy</span>
+                  <span className="" style={{lineHeight: '21px', fontSize:'18px', display: 'inline'}}>Tealosophy</span>
                   <img width="25" src={logoUrl} />
                 </div>
               </header>
@@ -59,7 +59,9 @@ export default class Menu extends Component {
                     <nav className={navClasses}>
                       <ul className="nav">
                         <MenuItem link={'/'}  icon='fa-home' color='bg-danger' linkText='Overview' currentPage={this.props.currentPage}>
-                        </MenuItem>                                    
+                        </MenuItem>          
+                        <MenuItem link={'/users'} icon='fa-users' color='bg-success' linkText='Users' currentPage={this.props.currentPage}>
+                        </MenuItem>                          
                         <MenuItem link={'/'}  icon='fa-desktop' color='bg-success' linkText='UI' currentPage={this.props.currentPage}>
                             <SubMenuItem link={'/ui/general'} linkText={'General'} />
                             <SubMenuItem link={'/ui/buttons'} linkText={'Buttons'} />

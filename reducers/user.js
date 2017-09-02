@@ -15,7 +15,7 @@ import {
 const initialState = {
 	_id: '23k3kl23kl23kl23j',
 	name:'Admin User',
-	avatar:'/dist/images/img3.jpg',
+	avatar:'/dist/images/avatar.png',
 	username:'@adminuser',
 	email:'info@lightsinthesky.io'
 };

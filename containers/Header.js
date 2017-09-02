@@ -30,7 +30,7 @@ export default class Header extends Component {
 	render() {
     const {route} = this.props;
 	  return (
-      <div className="lock-header subheader m-b-lg"> 
+      <div className="lock-header subheader divider-bottom m-b-lg"> 
         <div className="container full"> 
           <div className="m-b-lg"> 
             <div className="pull-left w50 m-t-xs">

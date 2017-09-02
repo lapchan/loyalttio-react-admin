@@ -67,6 +67,7 @@ import Docs from './Docs';
 
 import DataForms from './DataForms';
 import DataGrid from './DataGrid';
+import UsersDataGrid from './UsersDataGrid';
 
 // config
  
@@ -82,7 +83,7 @@ export default class Root extends Component {
   constructor(props) {
     super(props);
   }
-    
+
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -107,6 +108,8 @@ export default class Root extends Component {
             {/*<Route path='/analytics' component={Analytics} pageName="Analytics" pageDescription="Simple analytics example." />*/}
 
             <Route path='/account' component={Account} pageName="Account" pageDescription="Manage your account." />
+            <Route path='/users' component={DataGrid}  pageName="Users" pageDescription="Users data grid." />
+
             <Route path='/settings' component={Settings} pageName="Settings" pageDescription="Application Settings." />
             <Route path='/signup' component={Signup}  pageName="" pageDescription="" />
             <Route path='/profile' component={Profile}  pageName="Profile" pageDescription="Manage your profile" />
