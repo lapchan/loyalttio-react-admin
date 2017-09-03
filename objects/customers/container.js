@@ -25,8 +25,6 @@ const dataSchema = {
 
 var shallowCompare = require('react-addons-shallow-compare');
 
-let customersActions = LocalReduxOutlet('customers').actions;
-
 class Customers extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
