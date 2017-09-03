@@ -60,7 +60,7 @@ export default class Menu extends Component {
                       <ul className="nav">
                         <MenuItem link={'/'}  icon='fa-home' color='bg-danger' linkText='Overview' currentPage={this.props.currentPage}>
                         </MenuItem>          
-                        <MenuItem link={'/users'} icon='fa-users' color='bg-success' linkText='Users' currentPage={this.props.currentPage}>
+                        <MenuItem link={'/customers'} icon='fa-users' color='bg-success' linkText='Cusomters' currentPage={this.props.currentPage}>
                         </MenuItem>                          
                         <MenuItem link={'/'}  icon='fa-desktop' color='bg-success' linkText='UI' currentPage={this.props.currentPage}>
                             <SubMenuItem link={'/ui/general'} linkText={'General'} />

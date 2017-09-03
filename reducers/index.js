@@ -1,13 +1,3 @@
-/**
- * Copyright 2015-present, Lights in the Sky (3273741 NS Ltd.)
- * All rights reserved.
- *
- * This source code is licensed under the license found in the
- * LICENSE file in the root directory of this source tree. 
- * 
- * @providesModule reducers
- */
-
 import { routerStateReducer } from 'redux-react-router';
 import { combineReducers } from 'redux';
 
@@ -17,11 +7,9 @@ import ReduxOutlet from '../outlets/ReduxOutlet';
 import LocalReduxOutlet from '../outlets/LocalReduxOutlet';
 
 // custom reducers
-
 import app from './app';
 import user from './user';
-
-// initial demo app state
+import customers from '../objects/customers/api';
 
 import initialState from './initialState';
 
@@ -41,5 +29,6 @@ export default {
 	notes,
 	messages,
 	emails,
-	user
+	user, 
+	customers
 }

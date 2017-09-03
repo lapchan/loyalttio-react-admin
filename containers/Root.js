@@ -73,6 +73,8 @@ import UsersDataGrid from './UsersDataGrid';
  
 import Config from '../config'
 
+import Customers from '../objects/customers/container';
+
 const store = configureStore();
 
 const history = syncHistoryWithStore(browserHistory, store)
@@ -108,7 +110,7 @@ export default class Root extends Component {
             {/*<Route path='/analytics' component={Analytics} pageName="Analytics" pageDescription="Simple analytics example." />*/}
 
             <Route path='/account' component={Account} pageName="Account" pageDescription="Manage your account." />
-            <Route path='/users' component={DataGrid}  pageName="Users" pageDescription="Users data grid." />
+            <Route path='/customers' component={Customers}  pageName="Customers" pageDescription="Customers data grid." />
 
             <Route path='/settings' component={Settings} pageName="Settings" pageDescription="Application Settings." />
             <Route path='/signup' component={Signup}  pageName="" pageDescription="" />
