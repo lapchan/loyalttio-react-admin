@@ -61,6 +61,8 @@ class Customers extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log("contrainer");
+  console.log(state.customers);
   return {
     user: state.user,
     app:state.app,

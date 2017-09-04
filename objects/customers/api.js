@@ -1,10 +1,12 @@
 import skygear from 'skygear';
 import baseInitialState from '../../reducers/initialState'
+import APIUtils from '../../utils/api'
 
 const GET_CUSTOMERS_SUCCESS = 'GET_CUSTOMERS_SUCCESS';
 
 //action
 export function getMerchantsCustomersSuccess(customers){
+  console.log(customers);
 	return {
 		type: GET_CUSTOMERS_SUCCESS,
 		customers
@@ -17,7 +19,7 @@ export function getMerchantsCustomers() {
       skygear.lambda('get_merchants_customers', {user_id: skygear._auth._user._id}).then( 
         response => {
           console.log(response);
-          dispatch(getMerchantsCustomersSuccess({list: [response[0]]}));
+          dispatch(getMerchantsCustomersSuccess({list: APIUtils.recordstoArray(response)}));
         }, 
         error => {
           console.error(error);
