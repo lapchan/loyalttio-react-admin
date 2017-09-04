@@ -74,6 +74,8 @@ import UsersDataGrid from './UsersDataGrid';
 import Config from '../config'
 
 import Customers from '../objects/customers/container';
+import Products from '../objects/products/container';
+
 
 const store = configureStore();
 
@@ -111,7 +113,7 @@ export default class Root extends Component {
 
             <Route path='/account' component={Account} pageName="Account" pageDescription="Manage your account." />
             <Route path='/customers' component={Customers}  pageName="Customers" pageDescription="Customers data grid." />
-
+            <Route path='/products' component={Products}  pageName="Products" pageDescription="Products data grid." />
             <Route path='/settings' component={Settings} pageName="Settings" pageDescription="Application Settings." />
             <Route path='/signup' component={Signup}  pageName="" pageDescription="" />
             <Route path='/profile' component={Profile}  pageName="Profile" pageDescription="Manage your profile" />

@@ -10,6 +10,8 @@ import LocalReduxOutlet from '../outlets/LocalReduxOutlet';
 import app from './app';
 import user from './user';
 import customers from '../objects/customers/api';
+import products from '../objects/products/api';
+
 
 import initialState from './initialState';
 
@@ -30,5 +32,6 @@ export default {
 	messages,
 	emails,
 	user, 
-	customers
+	customers,
+	products
 }
