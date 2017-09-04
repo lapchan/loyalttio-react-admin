@@ -75,6 +75,9 @@ import Config from '../config'
 
 import Customers from '../objects/customers/container';
 import Products from '../objects/products/container';
+import Stores from '../objects/stores/container';
+import Employees from '../objects/employees/container';
+import SalesOrders from '../objects/sales_orders/container';
 
 
 const store = configureStore();
@@ -114,6 +117,9 @@ export default class Root extends Component {
             <Route path='/account' component={Account} pageName="Account" pageDescription="Manage your account." />
             <Route path='/customers' component={Customers}  pageName="Customers" pageDescription="Customers data grid." />
             <Route path='/products' component={Products}  pageName="Products" pageDescription="Products data grid." />
+            <Route path='/stores' component={Stores}  pageName="Stores" pageDescription="Stores data grid." />
+            <Route path='/employees' component={Employees}  pageName="Employees" pageDescription="Employees data grid." />
+            <Route path='/sales_orders' component={SalesOrders}  pageName="SalesOrders" pageDescription="Sales Orders data grid." />
             <Route path='/settings' component={Settings} pageName="Settings" pageDescription="Application Settings." />
             <Route path='/signup' component={Signup}  pageName="" pageDescription="" />
             <Route path='/profile' component={Profile}  pageName="Profile" pageDescription="Manage your profile" />

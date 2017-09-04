@@ -11,7 +11,9 @@ import app from './app';
 import user from './user';
 import customers from '../objects/customers/api';
 import products from '../objects/products/api';
-
+import stores from '../objects/stores/api';
+import employees from '../objects/employees/api';
+import sales_orders from '../objects/sales_orders/api';
 
 import initialState from './initialState';
 
@@ -33,5 +35,8 @@ export default {
 	emails,
 	user, 
 	customers,
-	products
+	products,
+	stores,
+	employees,
+	sales_orders
 }

@@ -62,6 +62,10 @@ export default class Menu extends Component {
                         </MenuItem>          
                         <MenuItem link={'/customers'} icon='fa-users' color='bg-success' linkText='Cusomters' currentPage={this.props.currentPage}/>
                         <MenuItem link={'/products'} icon='fa-tasks' color='bg-success' linkText='Products' currentPage={this.props.currentPage}/>
+                        <MenuItem link={'/stores'} icon='fa-database' color='bg-success' linkText='Stores' currentPage={this.props.currentPage}/>
+                        <MenuItem link={'/employees'} icon='fa-users' color='bg-success' linkText='Employees' currentPage={this.props.currentPage}/>
+                        <MenuItem link={'/sales_orders'} icon='fa-database' color='bg-success' linkText='SalesOrders' currentPage={this.props.currentPage}/>
+
                         <MenuItem link={'/'}  icon='fa-desktop' color='bg-success' linkText='UI' currentPage={this.props.currentPage}>
                             <SubMenuItem link={'/ui/general'} linkText={'General'} />
                             <SubMenuItem link={'/ui/buttons'} linkText={'Buttons'} />
