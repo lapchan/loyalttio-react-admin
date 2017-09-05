@@ -15,14 +15,6 @@ const dataSchema = {
     "name":{
       "type":"String",
       "header": "Store Name"
-    },
-    "currency":{
-      "type":"String",
-      "header": "Store Price Currency"
-    },
-    "pricePerUnit":{
-      "type":"String",
-      "header": "Store Price"
     }
   }
 }

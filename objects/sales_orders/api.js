@@ -13,13 +13,14 @@ export function getMerchantsSalesOrdersSuccess(sales_orders){
 	}
 }
 
-export function getMerchantsSalesOrderss() {
+export function getMerchantsSalesOrders() {
 	return dispatch => {
 		return new Promise((resolve, reject) => {
       skygear.lambda('get_merchants_sales_orders', {user_id: skygear._auth._user._id}).then( 
         response => {
           console.log(response);
-          dispatch(getMerchantsSalesOrdersSuccess({list: APIUtils.recordstoArray(response)}));
+          var type = response["result"]["meta"]["type"]          
+          dispatch(getMerchantsSalesOrdersSuccess({list: APIUtils.recordstoArray(response["result"][type])}));
         }, 
         error => {
           console.error(error);

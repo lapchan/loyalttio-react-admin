@@ -19,8 +19,9 @@ export function getMerchantsProducts() {
       skygear.lambda('get_merchants_products', {user_id: skygear._auth._user._id}).then( 
         response => {
           console.log(response);
-          dispatch(getMerchantsProductsSuccess({list: APIUtils.recordstoArray(response)}));
-        }, 
+          var type = response["result"]["meta"]["type"]          
+          dispatch(getMerchantsProductsSuccess({list: APIUtils.recordstoArray(response["result"][type])}));
+       }, 
         error => {
           console.error(error);
           reject(error);

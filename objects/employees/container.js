@@ -12,11 +12,11 @@ const dataSchema = {
   name : 'Employees',
   description : 'cusomters schema',
   fields : {
-    "first_name":{
+    "firstName":{
       "type":"String",
       "header": "First Name"
     },
-    "last_name":{
+    "lastName":{
       "type":"String",
       "header": "Last Name"
     }

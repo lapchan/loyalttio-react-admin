@@ -19,7 +19,8 @@ export function getMerchantsStores() {
       skygear.lambda('get_merchants_stores', {user_id: skygear._auth._user._id}).then( 
         response => {
           console.log(response);
-          dispatch(getMerchantsStoresSuccess({list: APIUtils.recordstoArray(response)}));
+          var type = response["result"]["meta"]["type"]          
+          dispatch(getMerchantsStoresSuccess({list: APIUtils.recordstoArray(response["result"][type])}));
         }, 
         error => {
           console.error(error);
