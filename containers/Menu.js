@@ -65,31 +65,6 @@ export default class Menu extends Component {
                         <MenuItem link={'/stores'} icon='fa-database' color='bg-success' linkText='Stores' currentPage={this.props.currentPage}/>
                         <MenuItem link={'/employees'} icon='fa-users' color='bg-success' linkText='Employees' currentPage={this.props.currentPage}/>
                         <MenuItem link={'/sales_orders'} icon='fa-database' color='bg-success' linkText='SalesOrders' currentPage={this.props.currentPage}/>
-
-                        <MenuItem link={'/'}  icon='fa-desktop' color='bg-success' linkText='UI' currentPage={this.props.currentPage}>
-                            <SubMenuItem link={'/ui/general'} linkText={'General'} />
-                            <SubMenuItem link={'/ui/buttons'} linkText={'Buttons'} />
-                            <SubMenuItem link={'/ui/fontawesome'} linkText={'Font Awesome'} />
-                            <SubMenuItem link={'/ui/materialicons'} linkText={'Material Design Icons'} />
-                            <SubMenuItem link={'/ui/tables'} linkText={'Tables'} />
-                            <SubMenuItem link={'/ui/modals'} linkText={'Modals'} />
-                        </MenuItem>
-                        <MenuItem link={'/components'} badgeCount={8} icon='fa-sitemap' color='bg-success' linkText='Components' currentPage={this.props.currentPage}>
-                        </MenuItem>
-                        <MenuItem link={'/'} icon='fa-database' color='bg-success' linkText='Data' currentPage={this.props.currentPage}>
-                            <SubMenuItem link={'/data/grid'} linkText={'Grid'} />
-                            <SubMenuItem link={'/data/forms'} linkText={'Forms'} />
-                        </MenuItem>
-                        <MenuItem link={'/forms'} icon='fa-tasks' color='bg-success' linkText='Forms' currentPage={this.props.currentPage}/>
-                        <MenuItem link={'/charts'} icon='fa-bar-chart-o' color='bg-success' linkText='Charts' currentPage={this.props.currentPage} />
-                        <MenuItem link={'/'} icon='fa-rocket' color='bg-success' linkText='Apps' currentPage={this.props.currentPage}>
-                            <SubMenuItem link={'/apps/boards'} linkText={'Boards'} />
-                            <SubMenuItem link={'/apps/notes'} linkText={'Notes'} />
-                            <SubMenuItem link={'/apps/maps'} linkText={'Maps'} />
-                            <SubMenuItem link={'/apps/email'} linkText={'Email'} badgeText="new" />
-                        </MenuItem>
-                        <MenuItem link={'/analytics'} icon='fa-line-chart' color='bg-success' linkText='Analytics' currentPage={this.props.currentPage} />
-                        <MenuItem link={'/docs'} icon='fa-book' color='bg-success' linkText='Docs' currentPage={this.props.currentPage} />
                       </ul>
                     </nav>
                   </div>

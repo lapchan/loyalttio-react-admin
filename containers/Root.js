@@ -111,9 +111,6 @@ export default class Root extends Component {
             <IndexRoute component={Dashboard} pageName="Dashboard" pageDescription="Admin Application Dashboard." />
 
             <Route path='/analytics' component={this.getComponent(Config.MENU[0].name)} pageName={this.getComponent(Config.MENU[0].name)} pageDescription="Simple analytics example." />
-            
-            {/*<Route path='/analytics' component={Analytics} pageName="Analytics" pageDescription="Simple analytics example." />*/}
-
             <Route path='/account' component={Account} pageName="Account" pageDescription="Manage your account." />
             <Route path='/customers' component={Customers}  pageName="Customers" pageDescription="Customers data grid." />
             <Route path='/products' component={Products}  pageName="Products" pageDescription="Products data grid." />
@@ -123,29 +120,9 @@ export default class Root extends Component {
             <Route path='/settings' component={Settings} pageName="Settings" pageDescription="Application Settings." />
             <Route path='/signup' component={Signup}  pageName="" pageDescription="" />
             <Route path='/profile' component={Profile}  pageName="Profile" pageDescription="Manage your profile" />
-            <Route path='/charts' component={Charts}  pageName="Charts" pageDescription="Chartist Charts" />
-
             <Route path='/ui/general' component={Bootstrap}  pageName="General" pageDescription="Bootstrap 3" />
-            <Route path='/ui/buttons' component={Buttons} pageName="Buttons" pageDescription="UI Buttons."/>
-            <Route path='/ui/modals' component={Modals}  pageName="Modals" pageDescription="Modal dialogs" />
-            <Route path='/ui/fontawesome' component={FontAwesome}  pageName="Fontawesome Icons" pageDescription="React stateless component." />
-            <Route path='/ui/materialicons' component={MaterialIcons}  pageName="Material Design Icons" pageDescription="React stateless component." />
-            <Route path='/ui/tables' component={Tables}  pageName="Tables" pageDescription="Simple Tables" />
-
-            <Route path='/apps/email' component={Email}  pageName="Email" pageDescription="react powered email." />
-            <Route path='/apps/maps' component={Maps}  pageName="Maps" pageDescription="react powered google maps." />
-            <Route path='/apps/boards' component={Boards}  pageName="Boards" pageDescription="Boards page" />
-            <Route path='/apps/boards/:id' component={Pins}  pageName="Pins" pageDescription="" />
-            <Route path='/apps/notes' component={Notes}  pageName="Notes" pageDescription="Notes page" />
-            <Route path='/apps/notes/:id' component={Note}  pageName="Notes" pageDescription="A simple notes app." />
-
-            <Route path='/forms' component={Forms}  pageName="Forms" pageDescription="Layout and Elements" />
-            <Route path='/docs' component={Docs}  pageName="Docs" pageDescription="Sample Docs" />
-            <Route path='/components' component={Components}  pageName="Components" pageDescription="Custom React components." />
-
             <Route path='/data/forms' component={DataForms}  pageName="Data Forms" pageDescription="Data driven forms." />
             <Route path='/data/grid' component={DataGrid}  pageName="Data Grid" pageDescription="Data driven data grid." />
-
           </Route>
           <Route path='/landing' component={Landing} />
           <Route path="/login" component={(props) => <Login {...props} onLogin={(email,password)=>dispatch(auth(email, password))} />} />
