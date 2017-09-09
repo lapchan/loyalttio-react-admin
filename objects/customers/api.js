@@ -3,6 +3,8 @@ import baseInitialState from '../../reducers/initialState'
 import APIUtils from '../../utils/api'
 
 const GET_CUSTOMERS_SUCCESS = 'GET_CUSTOMERS_SUCCESS';
+const ADD_CUSTOMERS_SUCCESS = 'ADD_CUSTOMERS_SUCCESS';
+
 
 //action
 export function getMerchantsCustomersSuccess(customers){
@@ -21,6 +23,32 @@ export function getMerchantsCustomers() {
           console.log(response);
           var type = response["result"]["meta"]["type"]          
           dispatch(getMerchantsCustomersSuccess({list: APIUtils.recordstoArray(response["result"][type])}));
+        }, 
+        error => {
+          console.error(error);
+          reject(error);
+        }
+      )
+    });
+	}
+}
+
+//action
+export function addMerchantsCustomersSuccess(customers){
+	return {
+		type: ADD_CUSTOMERS_SUCCESS,
+		customers
+	}
+}
+
+export function addMerchantsCustomers() {
+	return dispatch => {
+		return new Promise((resolve, reject) => {
+      skygear.lambda('add_merchants_customers', {user_id: skygear._auth._user._id}).then( 
+        response => {
+          console.log(response);
+          var type = response["result"]["meta"]["type"]          
+          dispatch(addMerchantsCustomersSuccess({list: APIUtils.recordstoArray(response["result"][type])}));
         }, 
         error => {
           console.error(error);

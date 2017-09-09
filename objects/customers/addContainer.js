@@ -40,12 +40,12 @@ export default class addNote extends Component {
           <form role="form">
             <div className="form-group">
               <input type="text" className="form-control has-error" value={this.state.firstName} placeholder={'fistName'} 
-                onChange={(e)=>this.handleNameChange(e)}/>
+                onChange={(e)=>this.handleFistNameChange(e)}/>
               <span className="text-muted help-block m-b-none">{this.state.errormessage}</span>
             </div>
             <div className="form-group">
               <input type="text" className="form-control has-error" value={this.state.lastName} placeholder={'lastName'}
-                 onChange={(e)=>this.handleDescriptionChange(e)}/>
+                 onChange={(e)=>this.handleLastNameChange(e)}/>
             </div>
             <div className="">
               <button type="button" onClick={(e)=>this.handleCreate(e)} className="btn btn-info btn-block w-pad">Create</button>

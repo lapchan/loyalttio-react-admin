@@ -45,20 +45,6 @@ export default class DataTable extends Component {
 
     return (
       <section>
-        <header style={{height:32}} className="panel-heading">
-          <span className="text-muted m-l-sm pull-right"> 
-            <div className="btn-group"> 
-              <button className="btn btn-danger m-t-xs btn-xs dropdown-toggle  m-r-sm" data-toggle="dropdown">Delete <span className="caret"></span></button> 
-                <ul className="dropdown-menu"> 
-                <li><a href="#">Delete Field</a></li> 
-                <li><a href="#">Delete All Data</a></li> 
-                <li className="divider"></li> 
-                <li><a href="#">Delete Dataset</a></li> 
-              </ul> 
-            </div>
-            <a href="#" className="btn btn-success btn-xs m-t-xs"><i className="fa fa-plus"></i> field</a> 
-          </span> 
-        </header>
         <div className="table-responsive">
           <table className="table table-striped">
             <thead>
