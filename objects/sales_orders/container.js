@@ -12,15 +12,7 @@ const dataSchema = {
   name : 'SalesOrders',
   description : 'sales orders schema',
   fields : {
-    "name":{
-      "type":"String",
-      "header": "Name"
-    },
-    "currency":{
-      "type":"String",
-      "header": "Price Currency"
-    },
-    "pricePerUnit":{
+    "price":{
       "type":"String",
       "header": "Price"
     }
