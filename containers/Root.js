@@ -78,6 +78,7 @@ import Products from '../objects/products/container';
 import Stores from '../objects/stores/container';
 import Employees from '../objects/employees/container';
 import SalesOrders from '../objects/sales_orders/container';
+import Ledgers from '../objects/ledgers/container';
 
 
 const store = configureStore();
@@ -117,12 +118,12 @@ export default class Root extends Component {
             <Route path='/stores' component={Stores}  pageName="Stores" pageDescription="Stores data grid." />
             <Route path='/employees' component={Employees}  pageName="Employees" pageDescription="Employees data grid." />
             <Route path='/sales_orders' component={SalesOrders}  pageName="SalesOrders" pageDescription="Sales Orders data grid." />
+            <Route path='/ledgers' component={Ledgers}  pageName="Ledgers" pageDescription="Ledgers data grid." />
+
             <Route path='/settings' component={Settings} pageName="Settings" pageDescription="Application Settings." />
             <Route path='/signup' component={Signup}  pageName="" pageDescription="" />
             <Route path='/profile' component={Profile}  pageName="Profile" pageDescription="Manage your profile" />
             <Route path='/ui/general' component={Bootstrap}  pageName="General" pageDescription="Bootstrap 3" />
-            <Route path='/data/forms' component={DataForms}  pageName="Data Forms" pageDescription="Data driven forms." />
-            <Route path='/data/grid' component={DataGrid}  pageName="Data Grid" pageDescription="Data driven data grid." />
           </Route>
           <Route path='/landing' component={Landing} />
           <Route path="/login" component={(props) => <Login {...props} onLogin={(email,password)=>dispatch(auth(email, password))} />} />

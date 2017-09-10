@@ -14,6 +14,7 @@ import products from '../objects/products/api';
 import stores from '../objects/stores/api';
 import employees from '../objects/employees/api';
 import sales_orders from '../objects/sales_orders/api';
+import ledgers from '../objects/ledgers/api';
 
 
 export default {
@@ -24,5 +25,5 @@ export default {
 	products,
 	stores,
 	employees,
-	sales_orders
+	ledgers
 }
