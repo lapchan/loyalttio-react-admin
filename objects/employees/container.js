@@ -11,16 +11,16 @@ import {getMerchantsEmployees} from './api'
 const dataSchema = {
   name : 'Employees',
   description : 'cusomters schema',
-  fields : {
-    "firstName":{
+  fields : [
+    { "field": "firstName",
       "type":"String",
       "header": "First Name"
     },
-    "lastName":{
+    { "field": "lastName",
       "type":"String",
       "header": "Last Name"
     }
-  }
+  ]
 }
 
 var shallowCompare = require('react-addons-shallow-compare');

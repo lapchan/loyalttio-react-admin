@@ -16,16 +16,16 @@ let Factory = ModalFactory.modalFromFactory;
 const dataSchema = {
   name : 'Customers',
   description : 'cusomters schema',
-  fields : {
-    "firstName":{
+  fields : [
+    { "field": "firstName",
       "type":"String",
       "header": "First Name"
     },
-    "lastName":{
+    { "field": "lastName",
       "type":"String",
       "header": "Last Name"
     }
-  }
+  ]
 }
 
 var shallowCompare = require('react-addons-shallow-compare');
@@ -88,8 +88,6 @@ class Customers extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("contrainer");
-  console.log(state.customers);
   return {
     user: state.user,
     app:state.app,

@@ -1,13 +1,3 @@
-/**
- * Copyright 2015-present, Lights in the Sky (3273741 NS Ltd.)
- * All rights reserved.
- *
- * This source code is licensed under the license found in the
- * LICENSE file in the root directory of this source tree. 
- * 
- * @providesModule DataTable
- */
-
 import React, {Component} from 'react';
 import DataRow from './Row';
 import {Pager} from '../../components/ui/';
@@ -16,27 +6,20 @@ export default class DataTable extends Component {
     
   headers() {
     const {schema} = this.props;
-    return Object.keys(schema.fields).reverse().map((key,i) => {
-      return <th key={'header-key-'+key + '-' + i} key={key}>{key}</th>; 
+    return schema.fields.map((obj) => {
+      return (<th>{obj.header}</th>); 
     })
-  }
-
-  deleteRow(id) {
-    this.props.onDelete(id);
   }
 
   renderrows() {
     const {rows, schema} = this.props;
-    const headerkeys = Object.keys(schema.fields).reverse();
-
     return rows.map(row => {
       return <DataRow 
-        key={row._id}
-        schema={schema}
-        keys={headerkeys}
-        onDelete={(id)=>this.deleteRow(id)}
-        row={row} 
-      />
+      key={row._id}
+      schema={schema}
+      onDelete={(id)=>this.deleteRow(id)}
+      row={row} 
+    />
     });
   }
 

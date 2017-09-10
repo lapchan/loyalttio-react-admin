@@ -11,20 +11,20 @@ import {getMerchantsProducts} from './api'
 const dataSchema = {
   name : 'Products',
   description : 'products schema',
-  fields : {
-    "name":{
+  fields : [
+    { "field": "name",
       "type":"String",
       "header": "Product Name"
     },
-    "currency":{
+    { "field": "currency",
       "type":"String",
       "header": "Product Price Currency"
     },
-    "pricePerUnit":{
+    { "field": "pricePerUnit",
       "type":"String",
       "header": "Product Price"
     }
-  }
+  ]
 }
 
 var shallowCompare = require('react-addons-shallow-compare');

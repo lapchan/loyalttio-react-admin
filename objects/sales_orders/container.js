@@ -11,12 +11,12 @@ import {getMerchantsSalesOrders} from './api'
 const dataSchema = {
   name : 'SalesOrders',
   description : 'sales orders schema',
-  fields : {
-    "price":{
+  fields : [
+    { "field": "price",
       "type":"String",
       "header": "Price"
     }
-  }
+  ]
 }
 
 var shallowCompare = require('react-addons-shallow-compare');

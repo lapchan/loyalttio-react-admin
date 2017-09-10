@@ -13,20 +13,20 @@ import {getMerchantsLedgers} from '../ledgers/api'
 const dataSchema = {
   name : 'Ledgers',
   description : 'ledgers schema',
-  fields : {
-    "name":{
-      "type":"String",
+  fields : [
+    { "field": "name",
+      "type": "String",
       "header": "Ledger Name"
     },
-    "currency":{
+    { "field": "currency",
       "type":"String",
       "header": "Ledger Price Currency"
     },
-    "pricePerUnit":{
+    { "filed": "pricePerUnit",
       "type":"String",
       "header": "Ledger Price"
     }
-  }
+  ]
 }
 
 var shallowCompare = require('react-addons-shallow-compare');
