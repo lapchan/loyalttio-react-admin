@@ -15,7 +15,9 @@ export const RECEIVE_DATA = 'RECEIVE_DATA';
 export const DELETE_DATA = 'DELETE_DATA';
 export const SENT_DATA = 'SENT_DATA';
 
-const API_URL = 'http://localhost:5000';
+const config = window.config;
+const SERVER_URL = config.backend;
+const APP_ID = config.appId;
 
 export function signup(email, companyName) {
 	const params = {
@@ -24,14 +26,14 @@ export function signup(email, companyName) {
 	}
 	return {
 		type : USER_SIGNUP,
-		promise: request.post(API_URL + '/api/signup', params)
+		promise: request.post(SERVER_URL + '/api/signup', params)
 	}
 }
 
 export function putMe(me, token) {
 	return {
 		type : USER_ME_UPDATE,
-		promise: request.post(API_URL + '/api/users/me', me,
+		promise: request.post(SERVER_URL + '/api/users/me', me,
 		{
 			headers: {
 				'x-access-token': token
@@ -47,7 +49,7 @@ export function putMe(me, token) {
 // 	}
 // 	return {
 // 		type : USER_AUTH,
-// 		promise: request.post(API_URL + '/authenticate', params)
+// 		promise: request.post(SERVER_URL + '/authenticate', params)
 // 	}
 // }
 
@@ -78,7 +80,7 @@ export function isAuthenticated() {
 export function fetchUsers(token) {
 	return {
 		type: RECEIVE_USERS,
-		promise: request.get(API_URL + '/api/users/',{
+		promise: request.get(SERVER_URL + '/api/users/',{
 			headers: {
 				'x-access-token': token
 			}

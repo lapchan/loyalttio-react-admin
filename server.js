@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
+const config = window.config;
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
@@ -9,10 +10,10 @@ new WebpackDevServer(webpack(config), {
   stats: {
     colors: true
   }
-}).listen(5050, 'localhost', function (err) {
+}).listen(config.serverPort, config.serverURL, function (err) {
   if (err) {
     console.log(err);
   }
 
-  console.log('Listening at localhost:5050');
+  console.log("Listening at "+config.serverURL+":"+config.serverPort);
 });
